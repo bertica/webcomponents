@@ -76,8 +76,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./component.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./component.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./component.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./component.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -95,7 +95,7 @@
 
 
 	// module
-	exports.push([module.id, "h1{\n\tcolor: blue;\n}", ""]);
+	exports.push([module.id, "h1 {\n  color: blue; }\n", ""]);
 
 	// exports
 
