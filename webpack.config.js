@@ -11,5 +11,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Hola Mundo'
     })
-  ]
+  ],
+  module: {
+    loaders: [
+      { test: /\.css$/, loader: "style-loader!css-loader" }
+    ]
+  }
 };
